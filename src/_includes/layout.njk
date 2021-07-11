@@ -10,7 +10,7 @@ title: My Rad Blog
     <title>{{ title }}</title>
   </head>
   <body>
-    {% include "_nav.njk" %}
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
     {{ content | safe }}
   </body>
 </html>
